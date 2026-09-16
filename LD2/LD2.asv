@@ -1,0 +1,5 @@
+% Variantas 1%
+% Daniel Spakovski Ef-25/1%
+% 1 uzduotis%
+a= 5:2:34;
+b= exp(a);
