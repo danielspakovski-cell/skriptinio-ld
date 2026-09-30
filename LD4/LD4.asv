@@ -1,0 +1,60 @@
+% 4 laboratorinis 1 uzduotis, a) 12 variantas
+x= linspace(-2, 1, 200);
+y= linspace(-2, 1, 200);
+[X, Y]= meshgrid(x, y);
+
+Z = 1 - 2.*(X.^2) - 3.*(Y.^2);
+figure('Color','w');
+surf(X, Y, Z);
+camlight left;
+lighting gouraud;
+shading interp;
+
+view(70, 30);
+colorbar;
+colormap jet;
+title('Trimaciu funkciju pavirsius Z=f(Z, Y)');
+xlabel('X asys');
+ylabel('Y asys');
+zlabel('Z asys');
+grid on;
+%% b)
+x= linspace(-2, 2, 200);
+y= linspace(-2, 2, 200);
+[X, Y]= meshgrid(x, y);
+
+Z = sin(abs(X + Y) / 20) .* exp(-abs(X + Y));
+figure('Color','w');
+surf(X, Y, Z);
+camlight left;
+lighting gouraud;
+shading interp;
+
+view(10, 35);
+colorbar;
+colormap cool;
+title('Trimaciu funkciju pavirsius Z=f(Z, Y)');
+xlabel('X asys');
+ylabel('Y asys');
+zlabel('Z asys');
+grid on;
+%% papildoma uzduotis
+x= linspace(-2, 2, 200);
+y= linspace(-2, 2, 200);
+[X, Y]= meshgrid(x, y);
+
+Z = 1 - (x.^2 + y.^2);
+figure('Color','w');
+surf(X, Y, Z);
+camlight left;
+lighting gouraud;
+shading interp;
+
+view(70, 30);
+colorbar;
+colormap jet;
+title('Trimaciu funkciju pavirsius Z=f(Z, Y)');
+xlabel('X asys');
+ylabel('Y asys');
+zlabel('Z asys');
+grid on;

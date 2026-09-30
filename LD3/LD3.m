@@ -49,7 +49,6 @@ grid off;
 subplot(2, 1, 2);
 stem(1:6, studentu_vidurkiai, 'k', 'LineWidth', 1, 'MarkerFaceColor', 'w');
 
-% Grafiko apipavidalinimas
 title('b),(vidurkis)');
 xlabel('Studentas');
 ylabel('pazymiu vidurkis');
