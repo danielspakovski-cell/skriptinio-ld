@@ -73,8 +73,10 @@ reiksmes_didesnes_uz_U1 = s_triuksm(indeks);
 t_didesni = t(indeks);
 s_filtruotas = s_triuksm;
 s_filtruotas(abs(s_filtruotas) < U2) = 0; 
-[max_val, idx_max] = max(s_filtruotas);
-[min_val, idx_min] = min(s_filtruotas);
+[max_val, idx_max_atr] = max(reiksmes_didesnes_uz_U1);
+[min_val, idx_min_atr] = min(reiksmes_didesnes_uz_U1);
+t_max = t_didesni(idx_max_atr);
+t_min = t_didesni(idx_min_atr);
 
 figure('Name', 'Signalo Filtravimas ir Analizė');
 subplot(2, 1, 1); 
