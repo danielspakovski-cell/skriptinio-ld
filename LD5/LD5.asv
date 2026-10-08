@@ -1,0 +1,40 @@
+% LD 5 
+% 1 uzduotis
+studentai = struct();
+studentai.pavardes = {'Putinas', 'Trumpas', 'Netanyahu', 'Nauseda'};
+studentai.amzius = [20, 21, 20, 19];
+
+disp('Pradine struktura:');
+disp(studentai);
+studentai = orderfields(studentai, {'amzius', 'pavardes'});
+
+disp('Struktura pakeitus lauku tvarka:');
+disp(studentai);
+%% 2 uzduotis
+while true
+ a=input('Iveskite kintamaji a:');
+ b=input('Iveskie kintamaji b:');
+ c=input('Iveskite kintamaji c:');
+ if a==0 && b==0 && c==1
+     disp('Ivestos baigiamojo ciklo reiksmes (a=0, b=0, c=1). Programa baigia darba');
+     break;
+    end
+    
+    kintamieji = [a, b, c];
+    pavadinimai = ['a', 'b', 'c'];
+    
+    % Kiekvienam kintamajam pritaikome neigiamas/teigiamas sąlygas
+    for i = 1:length(kintamieji)
+        val = kintamieji(i);
+        
+        if val < 0
+            rez = val^2; % Neigiamas pakeliamas kvadratu
+            disp(['Kintamasis ', pavadinimai(i), ' (', num2str(val), ') yra neigiamas. Kvadratas: ', num2str(rez)]);
+        else
+            rez = val^3; % Teigiamas (arba 0) pakeliamas kubu
+            disp(['Kintamasis ', pavadinimai(i), ' (', num2str(val), ') yra teigiamas (arba 0). Kubas: ', num2str(rez)]);
+        end
+    end
+    
+    disp('-----------------------------------');
+end
